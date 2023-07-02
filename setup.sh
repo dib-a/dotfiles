@@ -11,6 +11,7 @@ rm /home/$USER/.config/ranger
 # Copy configs to directory
 cp bash_profile /home/$USER/.bash_profile
 cp bashrc /home/$USER/.bashrc
+mkdir /home/$USER/.config
 cp -r kitty /home/$USER/.config/
 cp -r nvim /home/$USER/.config/
 cp -r picom /home/$USER/.config/
