@@ -1,13 +1,24 @@
 #!/bin/bash
 
+remove_if_exists() {
+    local path="$1"
+    if [ -f "$path" ]; then
+        rm "$path"
+    fi
+
+    if [ -d "$path" ]; then
+        rm -r "$path"
+    fi
+}
+
 # Remove available configs
-rm /home/$USER/.bashrc
-rm /home/$USER/.bash_profile
-rm /home/$USER/.xinitrc
-rm /home/$USER/.config/kitty
-rm /home/$USER/.config/nvim
-rm /home/$USER/.config/picom
-rm /home/$USER/.config/ranger
+remove_if_exists "/home/$USER/.bashrc"
+remove_if_exists "/home/$USER/.bash_profile"
+remove_if_exists "/home/$USER/.xinitrc"
+remove_if_exists "/home/$USER/.config/kitty"
+remove_if_exists "/home/$USER/.config/nvim"
+remove_if_exists "/home/$USER/.config/picom"
+remove_if_exists "/home/$USER/.config/ranger"
 
 # Copy configs to directory
 cp bash_profile /home/$USER/.bash_profile
