@@ -27,6 +27,13 @@ alias nem='systemctl suspend'
 alias pm='pulsemixer'
 alias audio='pulsemixer'
 
+#git
+alias ga='git add'
+alias gc='git commit -m'
+alias gd='git diff'
+alias gll='git pull'
+alias gsh='git push'
+
 # youtube-dl
 alias yt='yt-dlp'
 alias yt-3='yt-dlp --extract-audio --audio-format mp3'
